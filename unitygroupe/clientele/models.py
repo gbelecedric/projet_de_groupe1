@@ -1,5 +1,5 @@
 from django.db import models
-from django.config.contrib.user import User
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -15,7 +15,7 @@ class Clent(models.Model):
         return self.titre
     
 class Testimonial(models.Model):
-    autor = models.ForeignKey(User, on_delete=models.CASCADE, retated_name='AuteurTest')
+    autor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='auteurTest')
     images = models.ImageField(upload_to='img')
     descriptions = models.TextField()
     status = models.BooleanField()

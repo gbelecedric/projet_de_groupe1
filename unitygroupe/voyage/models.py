@@ -9,7 +9,7 @@ class Reservation(models.Model):
     phone = models.CharField(max_length=150)
     date_from = models.DateTimeField()
     date_to = models.DateTimeField()
-    typeYatch = models.ForeignKey('TypeYatch', on_delete=models.CASCADE,related_name='type_ yatch_reservation')
+    typeYatch = models.ForeignKey('TypeYatch', on_delete=models.CASCADE,related_name='yatch_reservation')
     email = models.EmailField(max_length=254)
     number = models.IntegerField()
     note = models.TextField()

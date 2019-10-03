@@ -13,7 +13,7 @@ class Categorie(models.Model):
     
     class Meta:
         verbose_name = 'categorie'
-        verbose_plural_name = 'categories'
+        verbose_name_plural = 'categories'
     
     def __str__(self):
         return self.titre
@@ -24,7 +24,7 @@ class Article(models.Model):
     titre = models.CharField(max_length=100)
     content = HTMLField('content')
     image = models.ImageField(upload_to='blog/image')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE,related_name='category_article')
+    category = models.ForeignKey('Categorie', on_delete=models.CASCADE,related_name='category_article')
     tag = models.ManyToManyField('Tag')
     author = models.ForeignKey('Author', on_delete=models.CASCADE,related_name='author_article')
     status = models.BooleanField(default=True)
