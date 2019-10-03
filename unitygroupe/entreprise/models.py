@@ -110,4 +110,4 @@ class Job(models.Model):
 
     def __str__(self):
         """Unicode representation of Job."""
-        return '{}'.format(self. ) # TODO
+        return '{}'.format(self.titre) # TODO
