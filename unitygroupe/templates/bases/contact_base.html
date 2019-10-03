@@ -50,7 +50,7 @@
     <div class="container">
         <div class="row align-items-center">
         <div class="col-6 col-lg-3">
-            <a href="{% %}">
+            <a href="">
             <img src="/static/images/logo.png" alt="Image" class="img-fluid">
             </a>
         </div>
@@ -108,20 +108,20 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
                 <li>
-                <a href="index.html" class="nav-link text-left">Home</a>
+                <a href="{% url 'home' %}" class="nav-link text-left">Home</a>
                 </li>
                 <li>
-                <a href="about.html" class="nav-link text-left">About Us</a>
+                <a href="{% url 'about' %}" class="nav-link text-left">About Us</a>
                 </li>
                 <li>
-                <a href="works.html" class="nav-link text-left">Our Projects</a>
+                <a href="{% url 'service' %}" class="nav-link text-left">Our Projects</a>
                 </li>
                 <li>
-                    <a href="testimonials.html" class="nav-link text-left">Testimonials</a>
+                    <a href="{% url 'testimonial' %}" class="nav-link text-left">Testimonials</a>
                 </li>
-                <li><a href="blog.html" class="nav-link text-left">Blog</a></li>
+                <li><a href="{% url 'blog' %}" class="nav-link text-left">Blog</a></li>
                 <li class="active">
-                    <a href="contact.html" class="nav-link text-left">Contact</a>
+                    <a href="{% url 'contact' %}" class="nav-link text-left">Contact</a>
                 </li>
             </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
@@ -139,7 +139,7 @@
 
 {% block content %}
 
-{% endblock %}
+{% endblock content %}
     
     <div class="footer">
     <div class="container">
