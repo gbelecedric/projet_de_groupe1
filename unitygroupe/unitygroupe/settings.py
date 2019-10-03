@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'entreprise.apps.EntrepriseConfig',
     'voyage.apps.VoyageConfig',
+    'django_admin_generator',
 ]
 
 MIDDLEWARE = [
