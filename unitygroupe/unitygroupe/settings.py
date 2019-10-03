@@ -31,18 +31,23 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
+    'filebrowser',
     'blog.apps.BlogConfig',
     'clientele.apps.ClienteleConfig',
     'config_app.apps.ConfigAppConfig',
     'contact.apps.ContactConfig',
     'entreprise.apps.EntrepriseConfig',
     'voyage.apps.VoyageConfig',
+    'django_admin_generator',
 ]
 
 MIDDLEWARE = [
@@ -118,6 +123,37 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+## Config 2
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 900,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': '''
+            textcolor save link image media preview codesample contextmenu
+            table code lists fullscreen  insertdatetime  nonbreaking
+            contextmenu directionality searchreplace wordcount visualblocks
+            visualchars code fullscreen autolink lists  charmap print  hr
+            anchor pagebreak
+            ''',
+    'toolbar1': '''
+            fullscreen preview bold italic underline | fontselect,
+            fontsizeselect  | forecolor backcolor | alignleft alignright |
+            aligncenter alignjustify | indent outdent | bullist numlist table |
+            | link image media | codesample |
+            ''',
+    'toolbar2': '''
+            visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |  code |
+            ''',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'statusbar': True,
+}
+
 
 
 # Static files (CSS, JavaScript, Images)
