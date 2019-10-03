@@ -57,7 +57,7 @@ class Entreprise(models.Model):
 
     def __str__(self):
         """Unicode representation of Entreprise."""
-        return '{}'.format(self. ) # TODO
+        return '{}'.format(self.name ) # TODO
 
 class Personnel(models.Model):
     """Model definition for Personnel."""
@@ -79,8 +79,7 @@ class Personnel(models.Model):
         """Unicode representation of Personnel."""
         return '{}'.format(self.name) 
 
-Font
-Job
+
 class Font(models.Model):
     """Model definition for Font."""
     name = models.CharField(max_length=100)
@@ -110,4 +109,4 @@ class Job(models.Model):
 
     def __str__(self):
         """Unicode representation of Job."""
-        return '{}'.format(self. ) # TODO
+        return '{}'.format(self.titre ) # TODO
