@@ -98,4 +98,4 @@ class Comment(models.Model):
         """Unicode representation of Comment."""
         return '{}'.format(self.author ) # TODO
 
-#./manage.py admin_generator contact >> contact/admin.py
+#./manage.py admin_generator config_app >> config_app/admin.py
