@@ -16,9 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from filebrowser.sites import site
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
     path('admin/filebrowser/', site.urls),
+   # path('', include('voyage.urls')),
+    path('blog/', include('blog.urls')),
+   # path('contact/', include('contact.urls')),
+
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT )
+    urlpatterns += static(settings.STATIC_URL, document_root= settings.STATIC_ROOT )
