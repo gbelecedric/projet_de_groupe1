@@ -22,9 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
     path('admin/filebrowser/', site.urls),
-   # path('', include('voyage.urls')),
+    path('', include('voyage.urls')),
     path('blog/', include('blog.urls')),
-   # path('contact/', include('contact.urls')),
+    path('contact/', include('contact.urls')),
 
 ]
 
