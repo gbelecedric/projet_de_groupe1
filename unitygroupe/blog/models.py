@@ -97,3 +97,5 @@ class Comment(models.Model):
     def __str__(self):
         """Unicode representation of Comment."""
         return '{}'.format(self.author ) # TODO
+
+#./manage.py admin_generator contact >> contact/admin.py
