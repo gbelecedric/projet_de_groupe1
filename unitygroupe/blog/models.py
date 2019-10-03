@@ -57,7 +57,7 @@ class Tag(models.Model):
 
     def __str__(self):
         """Unicode representation of Tag."""
-        return '{}'.format(self. ) # TODO
+        return '{}'.format(self.titre) # TODO
 
 class Author(models.Model):
     """Model definition for Author."""
